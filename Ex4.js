@@ -25,7 +25,7 @@ class Shape {
 
 class Circle extends Shape {
   radius = 1.0;
-  constructor(color, filled, radius = 1.0) {
+  constructor(color = "red", filled = true, radius = 1.0) {
     super(color, filled);
     this.radius = radius;
   }
@@ -50,7 +50,7 @@ class Circle extends Shape {
 class Rectangle extends Shape {
   width = 1.0;
   length = 1.0;
-  constructor(color, filled, width = 1.0, length = 1.0) {
+  constructor(color = "red", filled = true, width = 1.0, length = 1.0) {
     super(color, filled);
     this.width = width;
     this.length = length;
@@ -94,13 +94,11 @@ class Square extends Rectangle {
   }
 
   setWidth(side) {
-    super.setWidth(side);
-    this.setLength(side);
+    this.Width(side);
   }
 
   setLength(side) {
-    super.setLength(side);
-    this.length = side;
+   this.Length(side);
   }
 
   toString() {
